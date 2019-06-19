@@ -32,7 +32,7 @@ edges <- data.frame(From = name, from_url = url, to_url = links_body, To = NA)
 # 140
 
 i <- 0
-while (i < 140) {
+while (i < 359) {
   i <- i + 1
   url <- to_be_checked_urls[1]
   if(sum(checked_urls == url) > 0){
@@ -46,7 +46,7 @@ while (i < 140) {
                error = function(e) {print(paste("URL ERROR FOR", url)); 
                  error_urls <- c(error_urls, url);
                  to_be_checked_urls <- to_be_checked_urls[-1]})
-      print(paste("i =", i, ","))
+      print(paste("i =", i, ",", url))
       
       # actual scraping
       name <- html_text(html_node(page, css = "#firstHeading"))
