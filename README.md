@@ -15,7 +15,7 @@ The code and techniques discussed here are very much general purpose. When you e
   - This file tells us which directories to stay away from,
   - Watch out for "User-agent: *", these rules apply to all crawlers,
   
-  >User-agent: *\n
+  >User-agent: *
   >
   >Disallow: /
   
